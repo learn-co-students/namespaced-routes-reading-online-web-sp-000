@@ -7,7 +7,7 @@
 
 ## Lesson
 
-We're going to explore different ways of routing things in our blog application
+We're going to explore diferent ways of routing things in our blog application
 to help us organize and group certain routes and controllers more logically.
 
 #### Blog Stats
