@@ -9,3 +9,6 @@ class AuthorsController < ApplicationController
   end
 
 end
+
+
+#totally did something new.. Here it is. Good luck! Thanks!
