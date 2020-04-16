@@ -5,7 +5,13 @@ Rails.application.routes.draw do
 
   resources :posts, only: %i[index show new create edit update]
 
-  get '/admin/stats', to: 'stats#index'
+  #get '/admin/stats', to: 'stats#index' (changing routes to scope method below)
+  #when the route and module name are the same, you can use "namespace" method intead of "scope, module".
+  #scope '/admin', module: 'admin' do 
+  namespace :admin do 
+    resources :stats, only: [:index]
+  end 
 
   root 'posts#index'
+
 end
