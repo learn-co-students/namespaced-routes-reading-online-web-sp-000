@@ -4,5 +4,5 @@ class StatsController < ApplicationController
     @post_count = Post.count
     @authors_count = Author.count
     @last_post = Post.last
-  end
+  ed
 end
