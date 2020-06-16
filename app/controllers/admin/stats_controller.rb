@@ -1,5 +1,6 @@
-class StatsController < ApplicationController
+# controllers/admin/stats_controller.rb
 
+class Admin::StatsController < ApplicationController
   def index
     @post_count = Post.count
     @authors_count = Author.count
