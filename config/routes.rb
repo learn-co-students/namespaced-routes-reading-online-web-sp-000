@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   resources :authors, only: %i[show index] do
     resources :posts, only: %i[show index new edit]
   end
@@ -8,4 +9,5 @@ Rails.application.routes.draw do
   get '/admin/stats', to: 'stats#index'
 
   root 'posts#index'
+  
 end
