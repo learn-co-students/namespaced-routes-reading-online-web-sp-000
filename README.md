@@ -20,7 +20,7 @@ We can't actually browse to it yet because we need to set up a route. Let's add 
 
 ```ruby
 # config/routes.rb
-
+##
 get '/stats', to: 'stats#index'
 ```
 
