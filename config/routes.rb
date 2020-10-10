@@ -5,7 +5,11 @@ Rails.application.routes.draw do
 
   resources :posts, only: %i[index show new create edit update]
 
-  get '/admin/stats', to: 'stats#index'
+  # get '/admin/stats', to: 'stats#index'
 
+  namespace :admin do
+    resources :stats, only: [:index]
+    # resources :posts, only: [:index, :new, :create, :delete]
+  end
   root 'posts#index'
 end
