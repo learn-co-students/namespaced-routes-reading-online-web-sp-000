@@ -9,3 +9,7 @@ Rails.application.routes.draw do
 
   root 'posts#index'
 end
+
+namespace :admin do
+  resources :stats, only: [:index]
+end
