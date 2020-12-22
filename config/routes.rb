@@ -5,7 +5,17 @@ Rails.application.routes.draw do
 
   resources :posts, only: %i[index show new create edit update]
 
-  get '/admin/stats', to: 'stats#index'
+  #get '/admin/stats', to: 'stats#index'
+
+  # scope '/admin', module: 'admin' do
+  #   # need to tell routes about new module, else it will look in main controller directory (as opposed to module directory)
+  #   resources :stats, only: [:index]
+  # end
+
+  namespace :admin do
+    # namespace method is shorthand for scope, module
+    resources :stats, only: [:index]
+  end
 
   root 'posts#index'
 end
