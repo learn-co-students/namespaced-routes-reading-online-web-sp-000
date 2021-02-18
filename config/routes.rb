@@ -5,7 +5,15 @@ Rails.application.routes.draw do
 
   resources :posts, only: %i[index show new create edit update]
 
-  get '/admin/stats', to: 'stats#index'
+  namespace :admin do 
+  #OLD AND BUSTED
+  #scope '/admin', module: 'admin' do
+    #tells router to look for '/stats' controller under '/admin' 
+    #and to use it as a URL prefix
+    resources :stats, only: [:index]
+    # OLD AND BUSTED
+    #get '/admin/stats', to: 'stats#index'
+  end 
 
   root 'posts#index'
 end
