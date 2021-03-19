@@ -4470,3 +4470,55 @@ ActionController::RoutingError (No route matches [GET] "/stats"):
   Rendered /Users/scottcreynolds/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/scottcreynolds/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/scottcreynolds/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (34.6ms)
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from <top (required)> at /Users/alisonwilliams/Flatiron/code/namespaced-routes-reading-online-web-sp-000/config/environment.rb:5)
+Started GET "/admin/stats" for ::1 at 2021-03-19 14:42:30 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StatsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering stats/index.html.erb within layouts/application
+  Rendered stats/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 616ms (Views: 571.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2021-03-19 14:42:37 -0400
+Processing by Rails::InfoController#routes as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/alisonwilliams/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/alisonwilliams/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (20.3ms)
+  Rendered /Users/alisonwilliams/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.2ms)
+  Rendered /Users/alisonwilliams/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/stats" for ::1 at 2021-03-19 14:51:21 -0400
+Processing by Admin::StatsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering admin/stats/index.html.erb within layouts/application
+  Rendered admin/stats/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 52ms (Views: 19.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/stats" for ::1 at 2021-03-19 14:53:34 -0400
+Processing by Admin::StatsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "authors"[0m
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering admin/stats/index.html.erb within layouts/application
+  Rendered admin/stats/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 20.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2021-03-19 14:54:27 -0400
+Processing by Rails::InfoController#routes as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/alisonwilliams/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/alisonwilliams/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [15 times] (5.2ms)
+  Rendered /Users/alisonwilliams/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/alisonwilliams/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
